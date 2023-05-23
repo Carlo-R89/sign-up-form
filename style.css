@@ -56,6 +56,10 @@ a {
   color: white;
 }
 
+a:hover {
+  opacity: 0.5;
+}
+
 .form-container {
   width: 65vw;
   height: 100vh;
@@ -81,16 +85,29 @@ form {
 }
 
 label {
+  display: flex;
+  flex-direction: column;
+  gap: 1ch;
   font-family: 'Roboto';
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.5ch;
-  margin-bottom: 5px;
+}
+
+label:focus-within {
+  color: blue;
+  font-weight: 900;
 }
 
 input {
   max-width: 200px;
   height: 30px;
+  padding: 10px;
+}
+
+.form-input:focus {
+  background-color: #a4dded;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 
 form > div {
@@ -113,10 +130,19 @@ form > div {
   color: #fff;
   background-color: #596d48;
   text-align: center;
+  border: none;
   border-radius: 12px;
+}
+
+#btn-submit:hover {
+  opacity: 0.5;
 }
 
 h5 a {
   color: #596d48;
   text-decoration: none;
+}
+
+h5 a:hover {
+  opacity: 0.5;
 }
